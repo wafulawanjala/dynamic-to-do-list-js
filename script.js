@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Create a remove button
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
-        removeButton.className = "remove-btn";
+
+        // Add the 'remove-btn' class to the remove button using classList.add
+        removeButton.classList.add("remove-btn");
 
         // Remove task when button is clicked
         removeButton.onclick = function () {
@@ -30,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Append button to list item and list item to task list
         listItem.appendChild(removeButton);
         taskList.appendChild(listItem);
+
+        // Add a class for styling the task item (e.g., task-added)
+        listItem.classList.add("task-added");
 
         // Clear the input field
         taskInput.value = "";
